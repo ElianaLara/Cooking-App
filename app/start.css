@@ -1,0 +1,250 @@
+/* -----------------------------
+   BODY & GENERAL STYLING
+----------------------------- */
+body {
+    background-color: rgb(189, 241, 243);
+}
+
+/* Header styling */
+header {
+    font-family: "Minecraft";
+    text-align: center;
+    padding: 10%;
+}
+
+/* Chef image styling */
+.chef {
+    width: 300px;
+    margin: 0% auto;
+}
+
+/* Center the start button container */
+.start {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Start button styling */
+.start-button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: "Minecraft";
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 1px;
+    background-color: rgb(139, 186, 152);
+    color: white;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for Start button */
+.start-button:hover{
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 15px rgba(0,0,0,0.4);
+    background-color: rgb(90, 121, 99);
+}
+
+/* Active/pressed effect for Start button */
+.start-button:active{
+    transform: translateY(0);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    background-color: rgba(90, 121, 99, 0.617);
+}
+
+/* Hide CRUD section initially */
+.crud-section{
+    display: none;
+}
+
+/* Hidden Add Recipe form */
+#hidden-add{
+    display: none;
+}
+
+/* -----------------------------
+   FORM STYLING
+----------------------------- */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-family: "Minecraft";
+}
+
+/* Search input field */
+.search {
+    padding: 10px;
+    width: 60%;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(139, 186, 152, 0.653);
+}
+
+/* Add recipe button */
+.add {
+    padding: 24px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background-color: rgb(189, 241, 243);
+}
+
+/* Filter dropdown */
+.select select {
+    font-family: "Minecraft";
+    margin-left: 10px;
+    margin-top: 17%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(139, 186, 152, 0.653);
+}
+
+/* -----------------------------
+   RECIPE LIST STYLING
+----------------------------- */
+.recipe-list {
+    list-style: none;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 0;
+}
+
+/* Each recipe item */
+.recipe-list li {
+    background-color: #ffffff; /* white background */
+    border-radius: 10px;
+    padding: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block; 
+    margin-top: 10px;
+}
+
+/* Hover effect for recipe items */
+.recipe-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Recipe title */
+.recipe-list li h3 {
+    text-align: center;
+    font-family: "Minecraft";
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #8786b9;
+}
+
+/* Paragraphs inside recipe item */
+.recipe-list li p {
+    font-family: "Minecraft";
+    font-size: 13px;
+    margin: 5px 0;
+    color: #333333;
+    padding: 10px;
+    text-align: center;
+    white-space: pre-line;
+}
+
+/* Highlight strong text inside paragraphs */
+.recipe-list li p strong {
+    color: #579295; 
+    padding: 10px;
+}
+
+/* Recipe preview clickable area */
+.recipe-preview {
+    cursor: pointer;  
+    padding: 15px 20px;       
+}
+
+/* Recipe details hidden initially */
+.recipe-details.hidden {
+    display: none;
+    animation: fadeDown 0.3s ease;
+}
+
+/* Hover effect for preview */
+.recipe-preview:hover {
+    background-color: #f2f2f2;
+}
+
+/* Buttons inside recipe items and form */
+.recipe-form .save, 
+.recipe-form .cancel,
+.recipies .edit,
+.recipies .delete {
+    padding: 12px;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    font-family: "Minecraft";
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 4px;
+    transition: all 0.3s;
+    margin-bottom: 15px;
+}
+
+/* Hover effect for form & list buttons */
+.recipe-form .save:hover, 
+.recipe-form .cancel:hover,
+.recipies .edit:hover,
+.recipies .delete:hover {
+    background-color: #cfe1eb;
+    box-shadow: 0 5px 15px rgba(109, 109, 109, 0.2);
+}
+
+/* Hidden Add Recipe form styling */
+#hidden-add{
+    display: none;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Form heading */
+.recipe-form h2 {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Inputs, textareas, select dropdowns inside form */
+.recipe-form input,
+.recipe-form textarea,
+.recipe-form select {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 12px;
+    transition: all 0.3s;
+}
+
+/* Recipe action buttons container */
+.recipe-actions {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    margin-top: 10px;
+}
+
+/* Animation for smooth expand of recipe details */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
